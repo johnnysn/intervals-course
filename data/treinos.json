@@ -1,0 +1,200 @@
+[
+  {
+    "id": "id1",
+    "label": "HIIT Gibala",
+    "intervals": [
+      {
+        "label": "Aquecer",
+        "seconds": 120,
+        "intensity": 1
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 60,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 60,
+        "intensity": 0
+      }
+    ]
+  },
+  {
+    "id": "id2",
+    "label": "HIIT Tabata",
+    "intervals": [
+      {
+        "label": "Aquecer",
+        "seconds": 120,
+        "intensity": 1
+      },
+      {
+        "label": "Correr",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 10,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 10,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 10,
+        "intensity": 0
+      },
+      {
+        "label": "Correr",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 10,
+        "intensity": 0
+      }
+    ]
+  },
+  {
+    "id": "id3",
+    "label": "Circuito I",
+    "intervals": [
+      {
+        "label": "Aquecer",
+        "seconds": 120,
+        "intensity": 1
+      },
+      {
+        "label": "Burpees",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 40,
+        "intensity": 0
+      },
+      {
+        "label": "Agachamentos",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 40,
+        "intensity": 0
+      },
+      {
+        "label": "Barras",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 40,
+        "intensity": 0
+      },
+      {
+        "label": "Abdominais",
+        "seconds": 20,
+        "intensity": 2
+      },
+      {
+        "label": "Descansar",
+        "seconds": 40,
+        "intensity": 0
+      },
+      {
+        "label": "Desaquecer",
+        "seconds": 120,
+        "intensity": 1
+      }
+    ]
+  }
+]

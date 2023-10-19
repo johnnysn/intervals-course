@@ -18,6 +18,9 @@ export default function Header() {
                     <li>
                         <Link href={`/about`}>Sobre</Link>
                     </li>
+                    <li>
+                        <Link href={`/login`}>Login</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

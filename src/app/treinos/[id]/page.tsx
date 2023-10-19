@@ -1,5 +1,6 @@
 import TreinoTimer from "@/components/TreinoTimer";
 import treinoService from "@/services/treino-service";
+import { notFound } from "next/navigation";
 
 interface Props {
   params: { id: string };
@@ -9,7 +10,7 @@ export default async function Page({ params }: Props) {
   const treino = (await treinoService.getById(params.id)) || null;
 
   if (!treino) {
-    throw new Error("Treino não encontrado!");
+    notFound();
   }
 
   return (

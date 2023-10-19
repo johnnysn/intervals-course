@@ -11,7 +11,7 @@ export default function TreinoCard({ treino }: Props) {
 
   return (
     <Link
-        href={`/treinos/${treino.id}`}
+      href={`/treinos/${treino.id}`}
       className={`
         ${bebas.className} border border-teal-300 hover:bg-teal-950 py-4 px-6 
         rounded flex flex-col items-center gap-4 transition-colors duration-300 cursor-pointer

@@ -1,0 +1,32 @@
+.panel {
+  display: grid;
+  grid-template-areas: 
+    "timer timer"
+    "bar bar"
+    "progress progress"
+    "start stop";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 140px 64px 32px 72px;
+  align-items: center;
+  width: 330px;
+}
+
+.timer {
+  grid-area: timer;
+}
+
+.bar {
+  grid-area: bar;
+}
+
+.progress {
+  grid-area: progress;
+}
+
+.start {
+  grid-area: start;
+}
+
+.stop {
+  grid-area: stop;
+}

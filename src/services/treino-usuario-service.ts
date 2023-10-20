@@ -37,6 +37,14 @@ class TreinoUsuarioService {
 
     return treinoCriado;
   }
+
+  async delete(id: string) {
+    await prisma.treino.delete({
+      where: {
+        id
+      }
+    })
+  }
 }
 
 const treinoUsuarioService = new TreinoUsuarioService();

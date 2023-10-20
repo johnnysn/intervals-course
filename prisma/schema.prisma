@@ -21,6 +21,6 @@ model Interval{
  label String
  seconds Int
  intensity Int
- treino Treino @relation(fields: [treinoId], references: [id])
+ treino Treino @relation(fields: [treinoId], references: [id], onDelete: Cascade)
  treinoId String
 }

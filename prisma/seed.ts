@@ -6,17 +6,30 @@ async function seed() {
   // Criar o treino
   const novoTreino = await prisma.treino.create({
     data: {
-      label: "HIIT padrão",
+      label: "HIIT Gibala",
     },
   });
 
   // Definir os intervalos do treino
   const intervalos = [
-    { label: "Aquecer", seconds: 15, intensity: 1 },
-    { label: "Correr", seconds: 15, intensity: 2 },
-    { label: "Descansar", seconds: 15, intensity: 0 },
-    { label: "Correr", seconds: 15, intensity: 2 },
-    { label: "Descansar", seconds: 15, intensity: 0 },
+    { label: "Aquecer", seconds: 120, intensity: 1 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Correr", seconds: 60, intensity: 2 },
+    { label: "Descansar", seconds: 60, intensity: 0 },
+    { label: "Desaquecer", seconds: 120, intensity: 1 },
   ];
 
   // Associar os intervalos ao treino criado
@@ -35,17 +48,30 @@ async function seed() {
 
   const novoTreino2 = await prisma.treino.create({
     data: {
-      label: "HIIT Secundário",
+      label: "Tabata",
     },
   });
 
   // Definir os intervalos do treino
   const intervalos2 = [
-    { label: "Aquecer", seconds: 15, intensity: 1 },
-    { label: "Correr", seconds: 15, intensity: 2 },
-    { label: "Descansar", seconds: 15, intensity: 0 },
-    { label: "Correr", seconds: 15, intensity: 2 },
-    { label: "Descansar", seconds: 15, intensity: 0 },
+    { label: "Aquecer", seconds: 120, intensity: 1 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Correr", seconds: 20, intensity: 2 },
+    { label: "Descansar", seconds: 10, intensity: 0 },
+    { label: "Desaquecer", seconds: 120, intensity: 1 },
   ];
 
   // Associar os intervalos ao treino criado

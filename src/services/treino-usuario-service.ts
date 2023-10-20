@@ -20,6 +20,23 @@ class TreinoUsuarioService {
       }
     })
   }
+
+  async new(data: Treino) {
+    const treinoCriado = await prisma.treino.create({
+      data: {
+        label: data.label,
+      }
+    });
+
+    for (const interval of data.intervals) {
+      await prisma.interval.create({data: {
+        ...interval,
+        treinoId: treinoCriado.id
+      }});
+    }
+
+    return treinoCriado;
+  }
 }
 
 const treinoUsuarioService = new TreinoUsuarioService();

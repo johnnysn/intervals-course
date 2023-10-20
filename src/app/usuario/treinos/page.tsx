@@ -1,7 +1,8 @@
-'use client'
+"use client";
 import TreinoCard from "@/app/treinos/TreinoCard";
+import Button from "@/components/Button";
 import { Treino } from "@/models/treino";
-import treinoUsuarioService from "@/services/treino-usuario-service";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const revalidate = 30;
@@ -11,7 +12,7 @@ export default function Page() {
 
   useEffect(() => {
     const fetchTreinos = async () => {
-      const result = await fetch('/api/treinos');
+      const result = await fetch("/api/treinos");
 
       if (result.ok) {
         const data = await result.json();
@@ -25,12 +26,21 @@ export default function Page() {
   }, []);
 
   return (
-    <section id="treinos" className="mt-6 px-2 md:px-6 flex flex-col items-center gap-4">
-      <h2 className="text-2xl font-medium">Treinos disponíveis</h2>
+    <section id="treinos" className="flex flex-col items-center gap-4">
+      <h2 className="text-2xl font-medium">Meus treinos</h2>
 
       <ul className="flex justify-center gap-12 flex-wrap w-full">
-        { treinos.map(t => <li key={t.id} className="mt-4"> <TreinoCard treino={t} path="/usuario/treinos" /> </li>) }
+        {treinos.map((t) => (
+          <li key={t.id} className="mt-4">
+            {" "}
+            <TreinoCard treino={t} path="/usuario/treinos" />{" "}
+          </li>
+        ))}
       </ul>
+
+      <Link href={"/usuario/treinos/new"}>
+        <Button className="mt-6">Criar novo treino</Button>
+      </Link>
     </section>
   );
 }

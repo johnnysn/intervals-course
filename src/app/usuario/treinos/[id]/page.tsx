@@ -25,12 +25,12 @@ export default function Page({ params }: Props) {
   }, [params.id]);
 
   return (
-    <div className="px-2 md:px-6 mt-6">
+    <section>
       <h2 className="text-2xl"> Treino {treino?.label}</h2>
 
       <div className="flex justify-center mt-4">
         { treino && <TreinoTimer treino={treino} /> }
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Treino{
+  id String @id  @unique @default(cuid()) //uniqueid
+  label String
+  intervals Interval[]
+}
+
+model Interval{
+ id String  @id  @unique @default(cuid()) 
+ label String
+ seconds Int
+ intensity Int
+ treino Treino @relation(fields: [treinoId], references: [id])
+ treinoId String
+}

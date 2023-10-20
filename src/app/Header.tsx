@@ -13,7 +13,7 @@ export default function Header() {
             <nav>
                 <ul className="flex gap-3 uppercase">
                     <li>
-                        <Link href={`/treinos`}>Treinos</Link>
+                        <Link href={`/usuario/treinos`}>Treinos</Link>
                     </li>
                     <li>
                         <Link href={`/about`}>Sobre</Link>

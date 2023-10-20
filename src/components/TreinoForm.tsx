@@ -19,7 +19,7 @@ export default function TreinoForm({onSubmit}: Props) {
   const submitHandler = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
-    if (formElement.current?.checkValidity()) {
+    if (formElement.current?.checkValidity() && intervals.length > 0) {
       const treino = {
         id: '',
         label,

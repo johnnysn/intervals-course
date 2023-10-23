@@ -1,27 +1,41 @@
 "use client";
 import { Interval } from "@/models/interval";
 import TextInput from "./TextInput";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import SelectInput from "./SelectInput";
 import { ImBin } from "react-icons/im";
 import { Treino } from "@/models/treino";
 
 interface Props {
-  onSubmit: (treino: Treino) => void
+  onSubmit: (treino: Treino) => void,
+  treino?: Treino
 }
 
-export default function TreinoForm({onSubmit}: Props) {
+export default function TreinoForm({onSubmit, treino}: Props) {
   const [intervals, setIntervals] = useState<Interval[]>([]);
   const [label, setLabel] = useState("");
+  const [treinoId, setTreinoId] = useState<string | null>(null);
   const formElement = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (treino) {
+      setIntervals(treino.intervals);
+      setLabel(treino.label);
+      setTreinoId(treino.id);
+    } else {
+      setIntervals([]);
+      setLabel("");
+      setTreinoId(null);
+    }
+  }, [treino]); 
 
   const submitHandler = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
     if (formElement.current?.checkValidity() && intervals.length > 0) {
       const treino = {
-        id: '',
+        id: treinoId ?? '',
         label,
         intervals
       }

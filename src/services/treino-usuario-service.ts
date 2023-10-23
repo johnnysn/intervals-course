@@ -45,6 +45,32 @@ class TreinoUsuarioService {
       }
     })
   }
+
+  async edit(data: Treino) {
+    await prisma.interval.deleteMany({
+      where: {
+        treinoId: data.id
+      }
+    });
+
+    for (const interval of data.intervals) {
+      await prisma.interval.create({data: {
+        ...interval,
+        treinoId: data.id
+      }});
+    }
+
+    const treinoAlterado = await prisma.treino.update({
+      where: {
+        id: data.id
+      },
+      data: {
+        label: data.label
+      }
+    })
+
+    return treinoAlterado;
+  }
 }
 
 const treinoUsuarioService = new TreinoUsuarioService();

@@ -41,7 +41,7 @@ export default function TreinoTimer({ treino }: Props) {
         }
 
         return newState;
-      }), 50);
+      }), 1000);
 
       return () => clearInterval(intervalId);
     }

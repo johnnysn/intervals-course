@@ -26,7 +26,7 @@ export default function Page({ params }: Props) {
 
   return (
     <section>
-      <h2 className="text-2xl"> Treino {treino?.label}</h2>
+      <h2 className="text-3xl text-center mb-6"> Treino {treino?.label}</h2>
 
       <div className="flex justify-center mt-4">
         { treino && <TreinoTimer treino={treino} /> }
